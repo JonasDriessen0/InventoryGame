@@ -18,7 +18,7 @@ public class OpenInventory : MonoBehaviour
 
     private void Update()
     {
-        if (!isInventoryEnabled && Input.GetKeyDown(KeyCode.Escape))
+        if (!isInventoryEnabled && Input.GetKeyDown(KeyCode.Tab))
         {
             inventory.SetActive(true);
             mouseLook.enabled = false;
@@ -26,7 +26,7 @@ public class OpenInventory : MonoBehaviour
             Cursor.visible = true;
             isInventoryEnabled = true;
         }
-        else if (isInventoryEnabled && Input.GetKeyDown(KeyCode.Escape))
+        else if (isInventoryEnabled && Input.GetKeyDown(KeyCode.Tab))
         {
             inventory.SetActive(false);
             mouseLook.enabled = true;
