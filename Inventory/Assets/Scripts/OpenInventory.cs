@@ -8,6 +8,7 @@ public class OpenInventory : MonoBehaviour
 {
     [SerializeField] private GameObject inventory;
     [SerializeField] private MouseLook mouseLook;
+    [SerializeField] private GameObject hotbarBackground;
     private bool isInventoryEnabled;
 
     private void Start()
@@ -25,6 +26,7 @@ public class OpenInventory : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
             isInventoryEnabled = true;
+            hotbarBackground.SetActive(false);
         }
         else if (isInventoryEnabled && Input.GetKeyDown(KeyCode.Tab))
         {
@@ -33,6 +35,7 @@ public class OpenInventory : MonoBehaviour
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
             isInventoryEnabled = false;
+            hotbarBackground.SetActive(true);
         }
     }
 }

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 004355b100aca5644a7e8e4ff3efc025, type: 3}
   m_Name: New Inventory Item Data
   m_EditorClassIdentifier: 
-  id: 
-  displayName: 
-  icon: {fileID: 0}
-  prefab: {fileID: 0}
+  id: InventoryItem_Iron_Ore
+  displayName: Iron Ore
+  icon: {fileID: 21300000, guid: f4d81edda06f96e47974b5fdc9c17b3f, type: 3}
+  prefab: {fileID: 5911198389501750233, guid: 8b08acc43051f224cbe1c5dfffc0200b, type: 3}
