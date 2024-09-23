@@ -2351,19 +2351,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: IronOre
       objectReference: {fileID: 0}
-    - target: {fileID: 5911198389501750233, guid: 8b08acc43051f224cbe1c5dfffc0200b,
-        type: 3}
-      propertyPath: m_TagString
-      value: Item
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5911198389501750233, guid: 8b08acc43051f224cbe1c5dfffc0200b,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1062314435}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b08acc43051f224cbe1c5dfffc0200b, type: 3}
 --- !u!1 &575595603
 GameObject:
@@ -4157,34 +4148,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1060624200}
   m_CullTransparentMesh: 1
---- !u!1 &1062314434 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5911198389501750233, guid: 8b08acc43051f224cbe1c5dfffc0200b,
-    type: 3}
-  m_PrefabInstance: {fileID: 571974602}
-  m_PrefabAsset: {fileID: 0}
---- !u!64 &1062314435
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1062314434}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 3341590269825601168, guid: d185df914e40dbb458fdb3649c281be8, type: 3}
 --- !u!1 &1063616624
 GameObject:
   m_ObjectHideFlags: 0

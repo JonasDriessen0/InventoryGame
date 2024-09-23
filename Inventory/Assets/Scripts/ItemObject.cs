@@ -13,7 +13,5 @@ public class ItemObject : MonoBehaviour
         Destroy(gameObject);
     }
 
-    private void Update()
-    {
-    }
+    
 }
