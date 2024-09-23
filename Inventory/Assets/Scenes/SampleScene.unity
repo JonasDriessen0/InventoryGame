@@ -1589,6 +1589,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   raycastLength: 10
   pickupIndicator: {fileID: 100871519}
+  raycastLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  lookingAtItem: 0
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
