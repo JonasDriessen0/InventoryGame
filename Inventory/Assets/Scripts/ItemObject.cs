@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,11 @@ public class ItemObject : MonoBehaviour
 
     public void OnhandlePickupitem()
     {
-        InventorySystem.current.Add
+        InventorySystem.current.Add(referenceItem);
+        Destroy(gameObject);
+    }
+
+    private void Update()
+    {
     }
 }

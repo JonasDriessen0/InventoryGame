@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class InventorySystem : MonoBehaviour
 {
+    public static InventorySystem current;
     private Dictionary<InventoryItemData, InventoryItem> m_itemDictionary;
-    public List<InventoryItem> inventory { get; private set; }
+    public List<InventoryItem> inventory;
 
     private void Awake()
     {
-        inventory = new List<InventoryItem>();
+        current = this;
+        inventory = new List<InventoryItem >();
         m_itemDictionary = new Dictionary<InventoryItemData, InventoryItem>();
     }
 
