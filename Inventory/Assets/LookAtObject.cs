@@ -1,29 +1,51 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class LookAtObject : MonoBehaviour
 {
-    [SerializeField] private float raycastLength;
+    [SerializeField] private float raycastLength = 5f;
     [SerializeField] private GameObject pickupIndicator;
     [SerializeField] private LayerMask raycastLayer;
-    public bool lookingAtItem;
+    public bool lookingAtItem { get; private set; }
+    public ItemObject currentItemLookingAt { get; private set; }
+
+    private RaycastHit hit;
+    private Ray ray;
+
     private void Update()
     {
-        RaycastHit hit;
-        if (Physics.Raycast(transform.position, transform.forward, out hit, raycastLength, raycastLayer))
+        ray.origin = transform.position;
+        ray.direction = transform.forward;
+
+        if (Physics.Raycast(ray, out hit, raycastLength, raycastLayer))
         {
-            if (hit.collider.gameObject.CompareTag("Item"))
+            ItemObject itemObject = hit.collider.GetComponent<ItemObject>();
+            if (itemObject != null)
             {
-                lookingAtItem = true;
-                pickupIndicator.SetActive(true);
+                if (!lookingAtItem)
+                {
+                    lookingAtItem = true;
+                    pickupIndicator.SetActive(true);
+                }
+                currentItemLookingAt = itemObject;
             }
             else
             {
-                lookingAtItem = false;
-                pickupIndicator.SetActive(false);
+                ResetLookAt();
             }
+        }
+        else
+        {
+            ResetLookAt();
+        }
+    }
+
+    private void ResetLookAt()
+    {
+        if (lookingAtItem)
+        {
+            lookingAtItem = false;
+            pickupIndicator.SetActive(false);
+            currentItemLookingAt = null;
         }
     }
 }
